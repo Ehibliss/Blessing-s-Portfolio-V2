@@ -1,0 +1,368 @@
+.education {
+  padding: var(--section-padding);
+  background: var(--background);
+  color: var(--text);
+}
+
+.container {
+  width: min(100% - 40px, var(--container-width));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.header {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.eduspan {
+  display: block;
+  color: var(--secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+.educationHeading,
+.trainingHeading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.edcationHeading svg,
+.trainingHeading svg {
+  font-size: 1rem;
+}
+
+.educationCard {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.educationYear {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.yearLine {
+  width: 1px;
+  height: 80px;
+  margin: 10px 0;
+  background: var(--border);
+}
+
+.educationInfo h5 {
+  margin: 1rem 0;
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.educationInfo p {
+  color: var(--text-secondary);
+}
+
+.trainingCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  gap: 2rem;
+}
+
+.certificatePreview {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+}
+
+.certificatePreview img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.trainingCard:hover .certificatePreview img {
+  transform: scale(1.03);
+}
+
+.previewOverlay {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 10px 15px;
+  background-color: var(--highlight);
+  border-radius: var(--radius-lg);
+  color: var(--text-cream);
+  font-size: 0.7rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.trainingInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem;
+}
+
+.certificateLabel {
+  color: var(--secondary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.trainingInfo h5 {
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.certificateMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.certificateMeta span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.certificateMeta svg {
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+.trainingInfo p {
+  color: var(--text-secondary);
+}
+
+.certificateLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.certificateLink:hover {
+  color: var(--secondary);
+  transform: translateX(4px);
+}
+
+.learningSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  background: var(--deep);
+  border-radius: var(--radius-lg);
+  color: var(--cream);
+}
+
+.learningContent {
+  max-width: 600px;
+}
+
+.learningLabel {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--secondary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.learningContent h4 {
+  margin: 15px 0;
+  color: var(--text-cream);
+}
+
+.learningContent p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.learningStack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  max-width: 330px;
+}
+
+.learningStack span {
+  padding: 10px 15px;
+  background: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.resume {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.resumeLabel {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--secondary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.resumeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  max-width: 250px;
+  background: var(--primary);
+  border-radius: var(--radius-lg);
+  color: var(--text-cream);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.resumeButton:hover {
+  transform: translateY(-3px);
+  background: var(--secondary);
+  color: var(--deep);
+}
+
+@media (max-width: 1000px) {
+  .education {
+    padding: var(--section-padding-md);
+  }
+
+  .trainingCard {
+    grid-template-columns: 1fr;
+  }
+
+  .certificatePreview {
+    min-height: 350px;
+  }
+
+  .learningSection {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding: var(--section-padding-sm);
+  }
+  .container {
+    width: min(100% - 32px, var(--container-width));
+  }
+
+  .educationCard {
+    grid-template-columns: 1fr;
+    gap: 25px;
+
+    padding: 30px;
+  }
+
+  .educationYear {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .yearLine {
+    width: 50px;
+    height: 1px;
+
+    margin: 0;
+  }
+
+  .trainingInfo {
+    padding: 30px;
+  }
+
+  .certificatePreview {
+    min-height: 250px;
+  }
+
+  .learningSection {
+    padding: 30px;
+  }
+
+  .resume {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 30px;
+  }
+
+  .resumeButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .resume,
+  .learningSection,
+  .trainingCard {
+    grid-template-columns: 1fr;
+  }
+}

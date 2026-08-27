@@ -1,40 +1,139 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Brand  colors*/
 
-@media (prefers-color-scheme: dark) {
+  --primary: #183a37;
+  --primary-hover: #24514d;
+  --primary-light: #2d625d;
+  --primary-dark: #102b29;
+
+  --secondary: #c44900;
+  --secondary-hover: #a83d00;
+  --secondary-light: #e06420;
+  --secondary-dark: #8f3500;
+
+  --highlight: #432534;
+  --deep: #04151f;
+
+  /* Light Theme */
+
+  --background: #fdfbf7;
+  --background-secondary: #f5f0e7;
+
+  --surface: #ffffff;
+  --surface-hover: #eef4f2;
+
+  --text-primary: #04151f;
+  --text-secondary: #38504f;
+  --text-muted: #687776;
+  --text-cream: #efd6ac;
+  --border: #d8e2df;
+
+  --shadow: rgba(4, 21, 31, 0.1);
+  /* typography */
+
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-body: var(--font-inter), sans-serif;
+    --font-heading: var(--font-inter), sans-serif;
+    --font-logo: var(--font-playfair), serif;
   }
+  /* spacing */
+  --container-width: 1200px;
+  --section-padding: 4rem 5rem;
+  --section-padding-md: 2rem 3rem;
+  --section-padding-sm: 1.5rem 2rem;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+
+  /* transition */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
 }
 
-html {
-  height: 100%;
-}
+[data-theme="dark"] {
+  --background: #04151f;
+  --background-secondary: #081f27;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+  --surface: #183a37;
+  --surface-hover: #214a46;
 
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --text-primary: #efd6ac;
+  --text-secondary: #c7d2cf;
+  --text-muted: #91a5a1;
+
+  --border: #2a504c;
+
+  --shadow: rgba(0, 0, 0, 0.35);
+
+  --primary: #183a37;
+  --primary-hover: #28605a;
+  --primary-light: #3a756e;
+  --primary-dark: #102b29;
+
+  --secondary: #c44900;
+  --secondary-hover: #e06420;
+  --secondary-light: #ef7a32;
+  --secondary-dark: #9f3b00;
+
+  --cream: #efd6ac;
+  --deep: #04151f;
+  --highlight: #432534;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+
+  font-family: var(--font-body);
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+::selection {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  line-height: 1.2;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 700;
+}
+h1 {
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+}
+h3,
+h4,
+h5,
+h6 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  letter-spacing: -1px;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.9;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 a {
@@ -42,8 +141,68 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(100% - 40px, var(--container-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 24px;
+
+  background: var(--primary);
+  color: #ffffff;
+
+  border: none;
+  border-radius: var(--radius-md);
+
+  font-weight: 600;
+
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.25);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 70px;
+  }
+
+  .container {
+    width: min(100% - 32px, var(--container-width));
   }
 }
