@@ -2,6 +2,7 @@
   padding: var(--section-padding);
   background: var(--deep);
   color: var(--text-cream);
+  width: 100%;
 }
 
 .container {

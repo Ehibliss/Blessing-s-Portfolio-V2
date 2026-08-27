@@ -8,7 +8,7 @@ This portfolio showcases my journey from UI/UX basics and frontend development i
 
 ## Live Website
 
-**Live Portfolio:** Coming soon
+**Live Portfolio:** (https://blessing-portfolio-vl2.vercel.app/)
 
 **GitHub Repository:** https://github.com/Ehibliss/Blessing-s-Portfolio-V2.gitportfolio
 
@@ -137,8 +137,6 @@ A frontend recreation inspired by the HubSpot website.
 - Layout systems
 - Interactive sections
 - Reusable components
-
----
 
 #### Bliss Magicfingers
 
@@ -278,4 +276,5 @@ Examples include:
 The animations are intentionally kept subtle so that usability remains the priority.
 
 # Thankyou for visiting my portpolio.......... the end...
-"# Blessing-s-Portfolio-V2" 
+
+"# Blessing-s-Portfolio-V2"
