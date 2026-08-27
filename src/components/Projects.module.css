@@ -41,23 +41,23 @@
   align-items: center;
   padding: 2rem;
   background: var(--primary);
-
   border-right: 1px solid var(--border);
 }
 
 .projectNavItem {
   position: relative;
   display: grid;
-  grid-template-columns: 35px 1fr;
+  /* grid-template-columns: 35px 1fr; */
   align-items: center;
   width: 100%;
   padding: 15px;
   border: none;
   border-bottom: 1px dotted var(--border);
   background: transparent;
-  gap: 3rem;
+  gap: 2rem;
   color: var(--text-cream);
   cursor: pointer;
+
   transition:
     color var(--transition-fast),
     padding var(--transition-fast);
@@ -406,7 +406,10 @@
   }
 
   .projectNavItem {
-    min-width: 110px;
+    padding: 5px;
+    background: transparent;
+    gap: 5px;
+    grid-template-columns: 1fr;
   }
 
   .projectLinks {
