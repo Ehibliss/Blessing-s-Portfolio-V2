@@ -37,10 +37,13 @@
     --font-logo: var(--font-playfair), serif;
   }
   /* spacing */
+
+  --section-padding: 5rem 2rem;
+  --section-padding-md: 4rem 1.5rem;
+  --section-padding-sm: 3rem 1rem;
+
   --container-width: 1200px;
-  --section-padding: 4rem 5rem;
-  --section-padding-md: 2rem 3rem;
-  --section-padding-sm: 1.5rem 2rem;
+
   --radius-sm: 8px;
   --radius-md: 10px;
   --radius-lg: 20px;

@@ -25,13 +25,12 @@
 
 .projectShowcase {
   display: grid;
-  grid-template-columns: 210px 1fr;
+  grid-template-columns: 210px minmax(0, 1fr);
   min-height: 550px;
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow);
 }
 
 .projectNav {
@@ -97,13 +96,15 @@
 
 .projectContent {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  min-width: 0;
 }
 
 .imageWrapper {
   position: relative;
+  width: 100%;
+  min-width: 0;
   min-height: 500px;
-
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -329,6 +330,9 @@
 }
 
 @media (max-width: 1000px) {
+  .projects {
+    padding: var(--section-padding-md);
+  }
   .projectShowcase {
     grid-template-columns: 190px 1fr;
   }
@@ -345,82 +349,92 @@
     padding: 35px;
   }
 }
-
 @media (max-width: 750px) {
   .projects {
+    width: 100%;
     padding: var(--section-padding-sm);
   }
-  .projectHeader {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .projectShowcase {
-    grid-template-columns: 1fr;
-  }
-
-  .projectNav {
-    flex-direction: row;
-    padding: 15px 0;
-  }
-
-  .projectNavItem {
-    min-width: 150px;
-    border-right: 1px dotted var(--border);
-    border-bottom: none;
-  }
-
-  .projectNavItem:hover {
-    padding-left: 10px;
-  }
-
-  .imageWrapper {
-    min-height: 320px;
-  }
-
-  .projectDetails {
-    padding: 30px 24px;
-  }
-
-  .projectCounter {
-    width: 220px;
-  }
-  .workGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .workImage {
-    height: 240px;
-  }
-}
-
-@media (max-width: 600px) {
-  .projects {
-    padding: var(--section-padding-sm);
-  }
   .projectContainer {
-    width: min(100% - 30px, var(--container-width));
+    width: 100%;
+    max-width: 100%;
   }
 
-  .projectNav {
-    flex-direction: row;
-    overflow-x: auto;
-    justify-content: flex-start;
+  .projectHeader {
     width: 100%;
   }
 
-  .projectNavItem {
+  .projectShowcase {
+    width: 100%;
     min-width: 0;
-    background: transparent;
-    gap: 5px;
     grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .projectNav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0;
+    scrollbar-width: none;
+  }
+
+  .projectNav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .projectNavItem {
+    flex: 0 0 120px;
+    min-width: 120px;
+    padding: 14px 10px;
+    border-right: 1px dotted var(--border);
+    border-bottom: none;
+    gap: 5px;
+  }
+
+  .projectContent {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    min-width: 0;
+    min-height: 280px;
+  }
+
+  .imageWrapper img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .projectDetails {
+    width: 100%;
+    min-width: 0;
+    padding: 30px 24px;
   }
 
   .projectLinks {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
   }
+
+  .projectCounter {
+    width: 100%;
+    max-width: 220px;
+  }
+
   .workGrid {
+    width: 100%;
     grid-template-columns: 1fr;
+  }
+
+  .workCard {
+    width: 100%;
   }
 }

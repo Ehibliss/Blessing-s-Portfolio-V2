@@ -119,7 +119,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: var(--section-padding-sm);
+    padding: var(--section-padding-md);
   }
   .footerTop {
     grid-template-columns: 1fr 1fr;
@@ -130,9 +130,12 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  .footer {
+    padding: var(--section-padding-sm);
+  }
   .container {
-    width: min(100% - 32px, var(--container-width));
+    width: min(100% - 30px, var(--container-width));
   }
 
   .footerTop {
