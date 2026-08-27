@@ -48,7 +48,7 @@ const Hero = () => {
         <div className={styles.heroVisual}>
           <div className={styles.heroImageWrapper}>
             <img
-              src="/Image/missBliss.jpeg"
+              src="/image/missBliss.jpeg"
               alt="Blessing"
               width={500}
               height={600}
