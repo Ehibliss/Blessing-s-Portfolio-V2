@@ -336,4 +336,7 @@
   .floatingSection {
     grid-template-columns: 1fr;
   }
+  .aboutSlide span {
+    display: none;
+  }
 }
