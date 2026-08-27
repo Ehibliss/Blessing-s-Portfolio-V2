@@ -47,7 +47,7 @@
 .projectNavItem {
   position: relative;
   display: grid;
-  /* grid-template-columns: 35px 1fr; */
+  grid-template-columns: 35px 1fr;
   align-items: center;
   width: 100%;
   padding: 15px;
@@ -103,7 +103,7 @@
 .imageWrapper {
   position: relative;
   min-height: 500px;
-  position: relative;
+
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -329,7 +329,7 @@
 }
 
 @media (max-width: 1000px) {
-  .showcase {
+  .projectShowcase {
     grid-template-columns: 190px 1fr;
   }
 
@@ -385,11 +385,11 @@
   .projectCounter {
     width: 220px;
   }
-  .earlierGrid {
+  .workGrid {
     grid-template-columns: 1fr;
   }
 
-  .earlierImage {
+  .workImage {
     height: 240px;
   }
 }
@@ -398,15 +398,19 @@
   .projects {
     padding: var(--section-padding-sm);
   }
-  .container {
+  .projectContainer {
     width: min(100% - 30px, var(--container-width));
   }
+
   .projectNav {
-    padding: 0;
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   .projectNavItem {
-    padding: 5px;
+    min-width: 0;
     background: transparent;
     gap: 5px;
     grid-template-columns: 1fr;
