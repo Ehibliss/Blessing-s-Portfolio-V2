@@ -131,6 +131,15 @@
   }
 
   .category {
-    padding: 20px;
+    padding: 15px;
+  }
+  .category:hover {
+    transform: translate(-1px);
+  }
+  .skillGrid {
+    grid-template-columns: 1fr;
+  }
+  .skillCard:hover {
+    transform: translateY(-1px);
   }
 }

@@ -36,12 +36,18 @@
   font-family: "Playfair Display", serif;
   font-style: var(--font-logo);
 }
-
+.aboutSlider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 .Topslider {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+  gap: 1rem;
 }
 
 .slideCounter {
@@ -257,7 +263,8 @@
   }
 
   .aboutIntro {
-    margin-bottom: 100px;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
 
   .floatingSection {
@@ -280,22 +287,12 @@
   }
 
   .aboutIntro {
-    margin-bottom: 80px;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-
-  .aboutHeading h2 {
-    letter-spacing: -2px;
+  .aboutSlide {
+    padding: 2rem;
   }
-
-  .aboutText p {
-    font-size: 0.9rem;
-    line-height: 1.8;
-  }
-
-  .aboutText p:first-child {
-    font-size: 1rem;
-  }
-
   .Topslider {
     align-items: center;
   }
@@ -307,7 +304,7 @@
   }
 
   .slideNumber {
-    margin-bottom: 30px;
+    display: none;
   }
 
   .slideNumber span {
@@ -333,5 +330,10 @@
 
   100% {
     transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  .floatingSection {
+    grid-template-columns: 1fr;
   }
 }

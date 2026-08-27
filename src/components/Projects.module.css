@@ -41,6 +41,7 @@
   align-items: center;
   padding: 2rem;
   background: var(--primary);
+
   border-right: 1px solid var(--border);
 }
 
@@ -398,11 +399,14 @@
     padding: var(--section-padding-sm);
   }
   .container {
-    width: min(100% - 32px, var(--container-width));
+    width: min(100% - 30px, var(--container-width));
+  }
+  .projectNav {
+    padding: 0;
   }
 
   .projectNavItem {
-    min-width: 130px;
+    min-width: 110px;
   }
 
   .projectLinks {
