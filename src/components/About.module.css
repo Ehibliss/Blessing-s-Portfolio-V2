@@ -8,7 +8,6 @@
 
 .aboutContainer {
   width: min(100% - 40px, var(--container-width));
-
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -285,6 +284,7 @@
 @media (max-width: 768px) {
   .about {
     padding: var(--section-padding-sm);
+    text-align: center;
   }
 
   .aboutIntro {
@@ -292,7 +292,9 @@
     gap: 1.5rem;
   }
   .aboutSlide {
-    padding: 2rem;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    text-align: center;
   }
   .Topslider {
     align-items: center;

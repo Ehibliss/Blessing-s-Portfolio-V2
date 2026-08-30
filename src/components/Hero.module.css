@@ -124,6 +124,9 @@
   object-fit: cover;
   border-radius: var(--radius-lg);
 }
+.heroImageWrapper img:hover {
+  transform: scale(1.02);
+}
 
 @media (max-width: 900px) {
   .hero {
@@ -194,13 +197,7 @@
   }
 
   .heroImageWrapper {
-    width: 270px;
-    height: 350px;
-  }
-
-  .heroBadge {
-    right: 0;
-    bottom: 20px;
-    font-size: 0.65rem;
+    max-width: 300px;
+    max-height: 400px;
   }
 }
