@@ -17,13 +17,8 @@ export default function Footer() {
               Blessing<span>.</span>
             </a>
 
-            <p>
-              Frontend developer building thoughtful, responsive, and meaningful
-              web applications.
-            </p>
+            <p>Frontend developer.</p>
           </div>
-
-          {/* Navigation */}
 
           <div className={styles.navigation}>
             <span>Navigation</span>
@@ -88,13 +83,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ================================
-            BOTTOM
-        ================================= */}
-
         <div className={styles.footerBottom}>
           <p>© {currentYear} Blessing Ehi. All rights reserved.</p>
-
           <p>Designed & built with React & Next.js.</p>
 
           <a href="#home" className={styles.backToTop} aria-label="Back to top">

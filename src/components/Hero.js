@@ -8,16 +8,13 @@ const Hero = () => {
       <div className={styles.heroContainer}>
         {/* Hero Content */}
         <div className={styles.heroContent}>
-          <p className={styles.heroIntro}>Hi there, I'm Blessing </p>
+          <p className={styles.heroIntro}>Hi there, </p>
 
-          <h1 className={styles.heroTitle}>
-            I create digital solutions that are beautiful & functional.
-          </h1>
+          <h1 className={styles.heroTitle}>I'm Blessing</h1>
 
           <p className={styles.heroDescription}>
-            I'm a Frontend Developer growing into Full-Stack Development, I'm
-            passionate about turning ideas into responsive, beautiful and
-            meaningful web applications.
+            A Frontend Developer, I create digital solutions that are beautiful
+            & functional.
           </p>
 
           <div className={styles.heroButtons}>
@@ -39,7 +36,7 @@ const Hero = () => {
 
           <div className={styles.heroRole}>
             <span>Frontend Developer</span>
-            <span className={styles.roleLine}></span>
+            <span className={styles.roleLine}> </span>
             <span>Full-Stack Developer</span>
           </div>
         </div>
@@ -54,11 +51,6 @@ const Hero = () => {
               height={600}
               className={styles.heroImage}
             />
-          </div>
-
-          <div className={styles.heroBadge}>
-            <span className={styles.badgeDot}></span>
-            Available for opportunities
           </div>
         </div>
       </div>

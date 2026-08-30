@@ -33,33 +33,21 @@
   margin-bottom: 1rem;
 }
 
-.header h2 span {
-  color: var(--primary);
-}
-
 .contactGrid {
   display: grid;
-  grid-template-columns: 0.9fr 1.2fr;
-  gap: 2rem;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
   align-items: flex-start;
+  width: 100%;
 }
 
 .contactInfo {
   padding-top: 1.5rem;
 }
 
-.infoIntro {
-  margin-bottom: 2rem;
-}
-
-.infoIntro h4 {
-  margin: 0 0 12px;
-}
-
 .contactItem {
   display: flex;
   align-items: center;
-
   gap: 2rem;
   padding: 20px 0;
   border-top: 1px solid var(--border);
