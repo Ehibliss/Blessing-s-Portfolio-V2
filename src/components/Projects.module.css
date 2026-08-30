@@ -22,7 +22,6 @@
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
-
 .projectShowcase {
   display: grid;
   grid-template-columns: 210px minmax(0, 1fr);
@@ -137,14 +136,6 @@
   gap: 1rem;
 }
 
-.projectCategory {
-  color: var(--text-muted);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
 .technologies {
   display: flex;
   flex-wrap: wrap;
@@ -226,109 +217,6 @@
   transition: width 0.4s ease;
 }
 
-.earlierWorks {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  gap: 3rem;
-  padding: 7rem 0;
-}
-.earlierHeader {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 1rem;
-}
-.workGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.workCard {
-  overflow: hidden;
-  background: var(--surface);
-
-  border-radius: var(--radius-lg);
-  transition:
-    transform var(--transition-normal),
-    var(--transition-normal);
-}
-
-.workCard:hover {
-  transform: translateY(-3px);
-}
-
-.workImage {
-  overflow: hidden;
-  background: var(--deep);
-}
-
-.workImage img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.workCard:hover .workImage img {
-  transform: scale(1.04);
-}
-
-.Content {
-  padding: 1.2rem;
-  text-align: left;
-}
-
-.Content h4 {
-  margin-bottom: 10px;
-  font-size: 1.8rem;
-}
-
-.Content p {
-  margin-bottom: 20px;
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-.Tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-
-.Tech span {
-  padding: 5px 15px;
-  border-right: 1px solid var(--border);
-  color: var(--text-secondary);
-  font-size: 0.7rem;
-  font-weight: 600;
-}
-.Tech span:nth-child(4) {
-  border: none;
-}
-
-.Link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--secondary);
-  font-size: 0.85rem;
-  font-weight: 700;
-  transition:
-    color var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.Link:hover {
-  color: var(--secondary-hover);
-  transform: translateX(4px);
-}
-
 @media (max-width: 1000px) {
   .projects {
     padding: var(--section-padding-md);
@@ -349,7 +237,7 @@
     padding: 35px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .projects {
     width: 100%;
     padding: var(--section-padding-sm);
@@ -388,7 +276,7 @@
   .projectNavItem {
     flex: 0 0 120px;
     min-width: 120px;
-    padding: 14px 10px;
+    padding: 15px 10px;
     border-right: 1px dotted var(--border);
     border-bottom: none;
     gap: 5px;
@@ -427,14 +315,5 @@
   .projectCounter {
     width: 100%;
     max-width: 220px;
-  }
-
-  .workGrid {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
-
-  .workCard {
-    width: 100%;
   }
 }

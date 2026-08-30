@@ -12,14 +12,11 @@ export default function Contact() {
         <div className={styles.header}>
           <span className={styles.headerspan}>Get In Touch</span>
 
-          <h2>
-            Let's build something
-            <span> meaningful.</span>
-          </h2>
+          <h2>Let's build something.</h2>
 
           <p>
-            Do you have a project in mind, an opportunity you'd like to discuss,
-            or simply want to connect? I'd love to hear from you.
+            Have a project in mind or simply want to connect? I'd love to hear
+            from you.
           </p>
         </div>
 
@@ -27,14 +24,7 @@ export default function Contact() {
           {/* Left side */}
 
           <div className={styles.contactInfo}>
-            <div className={styles.infoIntro}>
-              <h4>Let's start a conversation.</h4>
-
-              <p>
-                I'm open to frontend development opportunities, full-stack
-                projects, collaborations, and interesting ideas.
-              </p>
-            </div>
+            <h4>Let's start a conversation.</h4>
 
             <a
               href="mailto:ochemeblessingehi@gmail.com"

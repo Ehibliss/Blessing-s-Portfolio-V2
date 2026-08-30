@@ -2,6 +2,7 @@
   padding: var(--section-padding);
   background: var(--deep);
   color: var(--cream);
+  width: 100%;
 }
 
 .container {
@@ -11,7 +12,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
   color: var(--text-cream);
 }
 

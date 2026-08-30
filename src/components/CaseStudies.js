@@ -15,13 +15,13 @@ const caseStudies = [
     subtitle: "Full-Stack Booking Platform",
 
     description:
-      "A modern salon booking platform created to transform a real business idea into a smoother digital experience for both customers and the business owner.",
+      "A modern salon booking platform created to transform a salonbusiness idea into an apsolute solution for both customers and the business owner.",
 
     problem:
       "Customers needed a simpler way to discover salon services, understand pricing and duration, and make appointments without relying entirely on manual communication.",
 
     approach:
-      "I designed and developed a responsive interface, built reusable components, created the booking workflow, and connected the application to a MongoDB database through REST APIs.",
+      " Designed and developed a responsive web app that created the booking workflow and connected the it to a MongoDB database through REST APIs.",
 
     technologies: ["Next.js", "React", "MongoDB", "Mongoose", "REST API"],
 
@@ -44,7 +44,7 @@ const caseStudies = [
       "The challenge was to recreate a professional SaaS interface while maintaining responsive layouts, reusable components, visual hierarchy, and a consistent user experience.",
 
     approach:
-      "I broke the interface into reusable sections, recreated the layouts with React and CSS, implemented responsive behavior, and focused on matching the visual structure across different screen sizes.",
+      "Broke the interface into reusable sections, recreated the layouts with React and CSS, implemented responsive behavior, and focused on matching the visual structure across different screen sizes.",
 
     image: "/image/hubspot.png",
 
@@ -67,8 +67,8 @@ export default function CaseStudies() {
           </div>
 
           <p>
-            More than the final interface. Here's a look at the problems I
-            explored, the decisions I made, and how I approached each project.
+            More than the final interface. Here's a look at the problems the
+            decisions I made, and the approached I used.
           </p>
         </div>
 
@@ -137,8 +137,8 @@ export default function CaseStudies() {
           <FiCheckCircle />
 
           <p>
-            Every project is an opportunity to learn, solve a problem, and build
-            something better.
+            Every project is an opportunity to learn, identify the problem, and
+            become the solution
           </p>
         </div>
       </div>

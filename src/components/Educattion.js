@@ -32,26 +32,15 @@ export default function Education() {
           </div>
 
           <div className={styles.educationCard}>
-            <div className={styles.educationYear}>
-              <span>2022</span>
+            <h4>B.Sc. Business Administration</h4>
 
-              <div className={styles.yearLine}></div>
+            <h5>National Open University of Nigeria</h5>
 
-              <span>2026</span>
-            </div>
-
-            <div className={styles.educationInfo}>
-              <h4>B.Sc. Business Administration</h4>
-
-              <h5>National Open University of Nigeria</h5>
-
-              <p>
-                I am currently Studying Business Administration while building
-                my career in software development. My academic background has
-                strengthened my understanding of business, problem-solving,
-                communication, and how to working with people.
-              </p>
-            </div>
+            <p>
+              Currently Studying Business Administration while building my
+              career in software development.
+            </p>
+            <span>2022 - 2026</span>
           </div>
         </div>
 
@@ -94,11 +83,7 @@ export default function Education() {
                 </span>
               </div>
 
-              <p>
-                A Practical frontend training that focused on building
-                responsive, interactive web applications using modern
-                technologies.
-              </p>
+              <p>A frontend training at Tech Sphere Academy</p>
 
               <a
                 href="/files/frontend-certificate.pdf"
@@ -121,8 +106,7 @@ export default function Education() {
 
             <p>
               I'm currently developing my backend skills and learning how to
-              build complete applications from the user interface to the
-              database and API layer.
+              build complete applications.
             </p>
           </div>
 
@@ -136,14 +120,6 @@ export default function Education() {
         </div>
 
         <div className={styles.resume}>
-          <div>
-            <span className={styles.resumeLabel}>
-              A bit more about my journey
-            </span>
-
-            <h5>See my full experience and skills.</h5>
-          </div>
-
           <a
             href="/files/Blessing-CV.pdf"
             target="_blank"

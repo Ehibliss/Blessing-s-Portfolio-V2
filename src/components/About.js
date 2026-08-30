@@ -40,9 +40,6 @@ const About = () => {
           My mission is to build digital products that make people's lives a
           little easier. I want to combine creativity, technology, and an
           understanding of people to create products that solve real problems.
-          <br />
-          <br /> I want to build applications that are thoughtful, accessible,
-          responsive, and meaningful.
         </>
       ),
     },
@@ -52,15 +49,9 @@ const About = () => {
       label: "Where I'm heading",
       text: (
         <>
-          I envision becoming a well-rounded Full-Stack Developer who can take
-          an idea from concept to a complete product. I want to keep learning,
-          work alongside talented people, and contribute to products that create
-          real value.
-          <br />
-          <br />
-          Ultimately, I want my work to go beyond code. I want to build things
-          that matter, create opportunities, and use technology to make
-          meaningful impacts.
+          I envision becoming aDeveloper who can take an idea from concept to a
+          complete product. I want to work alongside talented people and
+          contribute to products that create real value.
         </>
       ),
     },
@@ -87,15 +78,13 @@ const About = () => {
 
           <p>
             I’m Blessing, a developer with a background in Business
-            Administration and a passion for building meaningful digital
-            experiences.
+            Administration.
             <br />
             My journey into tech began with UI/UX basics and naturally grew into
-            Frontend Development, where I discovered my love for turning ideas
-            into functional and engaging products. I’m currently expanding into
-            Backend Development as I work toward becoming a Full-Stack
-            Developer. I enjoy solving problems, learning continuously, and
-            creating solutions.
+            Frontend Development. I’m currently expanding into Backend
+            Development as I work toward becoming a Full-Stack Developer. I
+            enjoy solving problems, learning continuously, and creating
+            solutions.
           </p>
         </div>
 
