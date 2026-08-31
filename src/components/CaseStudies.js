@@ -67,7 +67,7 @@ export default function CaseStudies() {
           </div>
 
           <p>
-            More than the final interface. Here's a look at the problems the
+            More than the final interface. Here's a look at the problems, the
             decisions I made, and the approached I used.
           </p>
         </div>
