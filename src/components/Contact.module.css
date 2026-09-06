@@ -48,7 +48,7 @@
 .contactItem {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 20px 0;
   border-top: 1px solid var(--border);
   color: var(--text);
@@ -56,11 +56,6 @@
   transition:
     color var(--transition-fast),
     transform var(--transition-fast);
-}
-
-.contactItem:hover {
-  transform: translateX(5px);
-  color: var(--primary);
 }
 
 .icon {
@@ -91,11 +86,6 @@
 
 .contactItem strong {
   font-size: 0.85rem;
-}
-
-.arrow {
-  margin-left: auto;
-  color: var(--secondary);
 }
 
 .socials {
@@ -229,9 +219,11 @@
   .container {
     width: min(100% - 32px, var(--container-width));
   }
+
   .contactGrid {
     align-items: center;
   }
+
   .form {
     padding: 25px 20px;
   }
