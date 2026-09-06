@@ -1,6 +1,6 @@
 "use client";
 
-import { FiArrowUpRight, FiMail, FiMapPin, FiSend } from "react-icons/fi";
+import { FiMail, FiMapPin, FiSend } from "react-icons/fi";
 import { FaTiktok, FaYoutube, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 import styles from "./Contact.module.css";
@@ -38,8 +38,6 @@ export default function Contact() {
                 <small>Email</small>
                 <strong>ochemeblessingehi@gmail.com</strong>
               </span>
-
-              <FiArrowUpRight className={styles.arrow} />
             </a>
 
             <div className={styles.contactItem}>

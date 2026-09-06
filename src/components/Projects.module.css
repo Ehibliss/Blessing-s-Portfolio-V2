@@ -38,7 +38,8 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: var(--primary);
+  background: var(--primary-dark);
+
   border-right: 1px solid var(--border);
 }
 
@@ -71,11 +72,11 @@
 }
 
 .projectNavItem:hover {
-  color: var(--surface);
+  color: var(--text-muted);
 }
 
 .projectNavActive {
-  color: var(--surface);
+  color: var(--text-muted);
 }
 
 .navArrow {

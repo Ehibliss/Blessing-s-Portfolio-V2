@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { FiMenu, FiX, FiDownload } from "react-icons/fi";
-import { TbBrightnessHalf } from "react-icons/tb";
+import { FiMenu, FiX, FiDownload, FiMoon, FiSun } from "react-icons/fi";
 
 import styles from "./Navbar.module.css";
+import { useTheme } from "@/context/ThemeContext";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -17,14 +17,10 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
-  };
-
-  const toggleTheme = () => {
-    setDarkMode((prev) => !prev);
   };
 
   const closeMenu = () => {
@@ -35,7 +31,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <a href="#home" className={styles.logo} onClick={closeMenu}>
-          B<span>.</span>
+          Blessing<span>.</span>
         </a>
 
         {/* Big screen Navigation */}
@@ -61,9 +57,9 @@ export default function Navbar() {
           <button
             className={styles.toggleButton}
             onClick={toggleTheme}
-            aria-label="Toggle theme"
+            type="button"
           >
-            <TbBrightnessHalf />
+            {theme === "light" ? <FiSun /> : <FiMoon />}
           </button>
 
           {/*My  Resume */}
@@ -77,12 +73,7 @@ export default function Navbar() {
           </a>
 
           {/* Mobile Menu */}
-          <button
-            className={styles.menuButton}
-            onClick={toggleMenu}
-            aria-label="Toggle navigation menu"
-            aria-expanded={menuOpen}
-          >
+          <button className={styles.menuButton} onClick={toggleMenu}>
             {menuOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>

@@ -28,7 +28,7 @@
 }
 .header h2,
 .header p {
-  color: var(--surface);
+  color: var(--text-muted);
 }
 
 .caseStudiesspan {

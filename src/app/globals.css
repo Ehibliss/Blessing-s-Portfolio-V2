@@ -31,11 +31,10 @@
   --shadow: rgba(4, 21, 31, 0.1);
   /* typography */
 
-  :root {
-    --font-body: var(--font-inter), sans-serif;
-    --font-heading: var(--font-inter), sans-serif;
-    --font-logo: var(--font-playfair), serif;
-  }
+  --font-body: var(--font-inter), sans-serif;
+  --font-heading: var(--font-inter), sans-serif;
+  --font-logo: var(--font-playfair), serif;
+
   /* spacing */
 
   --section-padding: 5rem 2rem;
@@ -57,30 +56,40 @@
   --background: #04151f;
   --background-secondary: #081f27;
 
-  --surface: #183a37;
-  --surface-hover: #214a46;
+  /* ---- Surfaces / Cards ----  */
 
-  --text-primary: #efd6ac;
-  --text-secondary: #c7d2cf;
-  --text-muted: #91a5a1;
+  --surface: #0b2527;
+  --surface-hover: #123532;
 
-  --border: #2a504c;
+  --text-primary: #f5ead5;
+  --text-secondary: #b8c5c1;
+  --text-muted: #829692;
 
+  --text-cream: #efd6ac;
+
+  --border: #234541;
   --shadow: rgba(0, 0, 0, 0.35);
 
-  --primary: #183a37;
-  --primary-hover: #28605a;
+  /* ---- Primary ---- */
+
+  --primary: #24514d;
+  --primary-hover: #2d625d;
   --primary-light: #3a756e;
   --primary-dark: #102b29;
+
+  /* ---- Secondary / Orange ---- */
 
   --secondary: #c44900;
   --secondary-hover: #e06420;
   --secondary-light: #ef7a32;
   --secondary-dark: #9f3b00;
 
-  --cream: #efd6ac;
-  --deep: #04151f;
+  /* ---- Accent ---- */
+
   --highlight: #432534;
+
+  /* Keep this as the darkest color */
+  --deep: #04151f;
 }
 
 * {
@@ -94,6 +103,7 @@ html {
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--text-primary);
   font-family: var(--font-body);

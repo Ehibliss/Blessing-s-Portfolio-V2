@@ -32,7 +32,7 @@
 
 .aboutIntro h2 span {
   display: block;
-  color: var(--primary);
+  color: var(--text-muted);
   font-family: "Playfair Display", serif;
   font-style: var(--font-logo);
 }
@@ -76,7 +76,6 @@
   align-items: center;
   overflow: hidden;
   background: var(--primary);
-  color: var(--surface);
   animation: slideIn 0.5s ease;
   border-radius: var(--radius-lg);
 }
@@ -94,7 +93,7 @@
 }
 
 .aboutSlide span {
-  color: var(--text-cream);
+  color: var(--text-muted);
   font-family: "Playfair Display", serif;
   font-size: 6rem;
   font-style: italic;
@@ -104,7 +103,7 @@
 .slideContent {
   position: relative;
   z-index: 2;
-  color: var(--surface);
+  color: var(--text-cream);
 }
 
 .slideContent h3 {
@@ -112,12 +111,12 @@
   line-height: 1;
   letter-spacing: -2px;
   margin: 2rem 0;
-  color: var(--surface);
+  color: var(--text-cream);
 }
 
 .slidePara {
   max-width: 650px;
-  color: var(--surface);
+  color: var(--text-cream);
 }
 
 .slideLabel {
@@ -141,7 +140,7 @@
   position: absolute;
   width: 120px;
   height: 120px;
-  border: 1px solid var(--text-cream);
+  border: 1px solid var(--border);
   border-radius: 50%;
 }
 
