@@ -49,73 +49,88 @@ export default function Education() {
             <FiAward />
             <span>Technical Training</span>
           </div>
+          <div className={styles.trainingContainer}>
+            <div className={styles.trainingCard}>
+              <div className={styles.certificatePreview}>
+                <img
+                  src="/image/full-stack-development.png"
+                  alt="Frontend Development certificate"
+                />
 
-          <div className={styles.trainingCard}>
-            <div className={styles.certificatePreview}>
-              <img
-                src="/image/frontend-certificate.jpeg"
-                alt="Frontend Development certificate"
-              />
+                <div className={styles.previewOverlay}>
+                  <span>Full-stack Development</span>
+                </div>
+              </div>
 
-              <div className={styles.previewOverlay}>
-                <span>Frontend Development</span>
+              <div className={styles.trainingInfo}>
+                <h4>Full-Stack Development</h4>
+
+                <h5>Udemy</h5>
+
+                <div className={styles.certificateMeta}>
+                  <span>
+                    <FiCalendar />
+                    2026
+                  </span>
+
+                  <span>
+                    <FiAward />
+                    Completed
+                  </span>
+                </div>
+
+                <a
+                  href="/files/Full-Stack-Development-Certificate.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.certificateLink}
+                >
+                  View Certificate
+                  <FiArrowUpRight />
+                </a>
               </div>
             </div>
 
-            <div className={styles.trainingInfo}>
-              <span className={styles.certificateLabel}>
-                Technical Certificate
-              </span>
+            <div className={styles.trainingCard}>
+              <div className={styles.certificatePreview}>
+                <img
+                  src="/image/frontend-certificate.jpeg"
+                  alt="Frontend Development certificate"
+                />
 
-              <h4>Frontend Development</h4>
-
-              <h5>Tech Sphere Academy</h5>
-
-              <div className={styles.certificateMeta}>
-                <span>
-                  <FiCalendar />
-                  2026
-                </span>
-
-                <span>
-                  <FiAward />
-                  Completed
-                </span>
+                <div className={styles.previewOverlay}>
+                  <span>Frontend Development</span>
+                </div>
               </div>
 
-              <p>A frontend training at Tech Sphere Academy</p>
+              <div className={styles.trainingInfo}>
+                <h4>Frontend Development</h4>
 
-              <a
-                href="/files/frontend-certificate.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.certificateLink}
-              >
-                View Certificate
-                <FiArrowUpRight />
-              </a>
+                <h5>Tech Sphere Academy</h5>
+
+                <div className={styles.certificateMeta}>
+                  <span>
+                    <FiCalendar />
+                    2026
+                  </span>
+
+                  <span>
+                    <FiAward />
+                    Completed
+                  </span>
+                </div>
+
+                <a
+                  href="/files/frontend-certificate.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.certificateLink}
+                >
+                  View Certificate
+                  <FiArrowUpRight />
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div className={styles.learningSection}>
-          <div className={styles.learningContent}>
-            <span className={styles.learningLabel}>Currently Learning</span>
-
-            <h4>Expanding beyond the frontend.</h4>
-
-            <p>
-              I'm currently developing my backend skills and learning how to
-              build complete applications.
-            </p>
-          </div>
-
-          <div className={styles.learningStack}>
-            <span>Node.js</span>
-            <span>Express</span>
-            <span>MongoDB</span>
-            <span>Mongoose</span>
-            <span>REST APIs</span>
           </div>
         </div>
 
@@ -126,8 +141,17 @@ export default function Education() {
             rel="noopener noreferrer"
             className={styles.resumeButton}
           >
-            <FiDownload />
+            <FiArrowUpRight />
             View Resume
+          </a>
+          <a
+            href="/files/Blessing-LDC-Certificate.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.leadershipButton}
+          >
+            <FiArrowUpRight />
+            View Leadership Certificate
           </a>
         </div>
       </div>

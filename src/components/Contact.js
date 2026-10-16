@@ -1,11 +1,65 @@
 "use client";
 
+import { useState } from "react";
 import { FiMail, FiMapPin, FiSend } from "react-icons/fi";
 import { FaTiktok, FaYoutube, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 import styles from "./Contact.module.css";
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [feedback, setFeedback] = useState({
+    type: "",
+    message: "",
+  });
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    setIsSubmitting(true);
+    setFeedback({ type: "", message: "" });
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const contactData = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      subject: formData.get("subject"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(contactData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Unable to send your message.");
+      }
+
+      setFeedback({
+        type: "success",
+        message: "Thank you! Your message has been sent successfully.",
+      });
+
+      form.reset();
+    } catch (error) {
+      setFeedback({
+        type: "error",
+        message: error.message || "Something went wrong. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.container}>
@@ -21,8 +75,6 @@ export default function Contact() {
         </div>
 
         <div className={styles.contactGrid}>
-          {/* Left side */}
-
           <div className={styles.contactInfo}>
             <h4>Let's start a conversation.</h4>
 
@@ -51,8 +103,6 @@ export default function Contact() {
               </span>
             </div>
 
-            {/* Social links */}
-
             <div className={styles.socials}>
               <a
                 href="https://github.com/Ehibliss"
@@ -76,7 +126,7 @@ export default function Contact() {
                 href="https://www.youtube.com/@codewithbliss"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Youtube"
+                aria-label="YouTube"
               >
                 <FaYoutube />
               </a>
@@ -85,54 +135,53 @@ export default function Contact() {
                 href="https://www.tiktok.com/@codewithbliss"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Tiktok"
+                aria-label="TikTok"
               >
                 <FaTiktok />
               </a>
             </div>
           </div>
 
-          {/* Right side form */}
-
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.inputGroup}>
               <label htmlFor="name">Name</label>
-
               <input
                 id="name"
                 name="name"
                 type="text"
                 placeholder="Your name"
+                maxLength={100}
+                autoComplete="name"
                 required
               />
             </div>
 
             <div className={styles.inputGroup}>
               <label htmlFor="email">Email</label>
-
               <input
                 id="email"
                 name="email"
                 type="email"
                 placeholder="you@gmail.com"
+                maxLength={255}
+                autoComplete="email"
                 required
               />
             </div>
 
             <div className={styles.inputGroup}>
               <label htmlFor="subject">Subject</label>
-
               <input
                 id="subject"
                 name="subject"
                 type="text"
                 placeholder="What's this about?"
+                maxLength={200}
               />
             </div>
 
             <div className={styles.inputGroup}>
               <label htmlFor="message">Message</label>
-
               <textarea
                 id="message"
                 name="message"
@@ -142,9 +191,19 @@ export default function Contact() {
               />
             </div>
 
-            <button type="submit" className={styles.submitButton}>
-              Send Message
-              <FiSend />
+            {feedback.message && (
+              <p role="status" aria-live="polite">
+                {feedback.message}
+              </p>
+            )}
+
+            <button
+              type="submit"
+              className={styles.submitButton}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
+              {!isSubmitting && <FiSend />}
             </button>
           </form>
         </div>

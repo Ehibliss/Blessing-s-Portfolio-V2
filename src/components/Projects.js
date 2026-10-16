@@ -7,6 +7,23 @@ import styles from "./Projects.module.css";
 
 const projects = [
   {
+    title: "Fhast Pay",
+
+    description:
+      "A fullstack banking application built with React and express.js as final group project for TS Academy Hajim cohort, group 13",
+    technologies: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Express",
+      "CSS",
+      "Responsive Design",
+    ],
+    image: "/image/FhastPay.png",
+    liveUrl: "https://fhast-pay.vercel.app/",
+    githubUrl: "https://github.com/Ehibliss/Capstone-project.git",
+  },
+  {
     title: "HubSpot Clone",
 
     description:

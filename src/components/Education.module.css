@@ -41,7 +41,6 @@
   gap: 10px;
   margin-bottom: 1.5rem;
   color: var(--text-muted);
-
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -80,13 +79,17 @@
   color: var(--text-secondary);
 }
 
-.trainingCard {
+.trainingContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.trainingCard {
+  display: grid;
+  grid-template-rows: 1fr 0.5fr;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  gap: 2rem;
 }
 
 .certificatePreview {
@@ -127,14 +130,6 @@
   justify-content: center;
   gap: 1rem;
   padding: 1.2rem;
-}
-
-.certificateLabel {
-  color: var(--secondary);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
 }
 
 .trainingInfo h5 {
@@ -183,60 +178,14 @@
   transform: translateX(4px);
 }
 
-.learningSection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 2rem;
-  padding: 3rem;
-  background: var(--deep);
-  border-radius: var(--radius-lg);
-  color: var(--cream);
-}
-
-.learningContent {
-  max-width: 600px;
-}
-
-.learningLabel {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--secondary);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.learningContent h4 {
-  margin: 15px 0;
-  color: var(--text-cream);
-}
-
-.learningContent p {
-  margin: 0;
-  color: var(--text-muted);
-}
-
-.learningStack {
+.resume {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 10px;
-  max-width: 330px;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
-
-.learningStack span {
-  padding: 10px 15px;
-  background: var(--primary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  color: var(--text-muted);
-  font-size: 0.7rem;
-  font-weight: 600;
-}
-
-.resumeButton {
+.resumeButton,
+.leadershipButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,8 +203,14 @@
     background var(--transition-fast);
 }
 
-.resumeButton:hover {
-  transform: translateY(-3px);
+.leadershipButton {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--secondary);
+}
+.resumeButton:hover,
+.leadershipButton:hover {
+  transform: translateY(-2px);
   background: var(--secondary);
   color: var(--deep);
 }
@@ -265,16 +220,12 @@
     padding: var(--section-padding-md);
   }
 
-  .trainingCard {
+  .trainingContainer {
     grid-template-columns: 1fr;
   }
 
   .certificatePreview {
     min-height: 350px;
-  }
-
-  .learningSection {
-    flex-direction: column;
   }
 }
 
@@ -313,18 +264,16 @@
     min-height: 250px;
   }
 
-  .learningSection {
-    padding: 30px;
-  }
-
   .resumeButton {
     width: 100%;
     justify-content: center;
   }
 }
 @media (max-width: 600px) {
-  .learningSection,
   .trainingCard {
     grid-template-columns: 1fr;
+  }
+  .resume {
+    flex-direction: column;
   }
 }
