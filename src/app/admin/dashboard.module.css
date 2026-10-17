@@ -1,0 +1,173 @@
+.page {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 5%;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.logo {
+  color: var(--primary);
+  font-family: var(--font-logo);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.account {
+  max-width: 65%;
+  overflow-wrap: anywhere;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.content {
+  width: min(100% - 2rem, 1000px);
+  margin: 0 auto;
+  padding: 3.5rem 0;
+}
+
+.eyebrow {
+  margin-bottom: 0.65rem;
+  color: var(--secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.content > h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.description {
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.statCard span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.statCard strong {
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+.messageList {
+  display: grid;
+  gap: 1rem;
+}
+
+.messageCard {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow-wrap: anywhere;
+}
+
+.messageHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.messageHeader h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.messageHeader time {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.email {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+.email:hover {
+  color: var(--secondary);
+}
+
+.subject {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.message {
+  margin: 0.75rem 0 0;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.empty,
+.notice {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.empty h2 {
+  margin-top: 0;
+}
+
+.empty p,
+.notice {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 2.5rem 0;
+  }
+
+  .messageCard {
+    padding: 1.1rem;
+  }
+
+  .header {
+    padding-inline: 1rem;
+  }
+}

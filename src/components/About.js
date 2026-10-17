@@ -80,10 +80,10 @@ const About = () => {
             I’m Blessing, a developer with a background in Business
             Administration.
             <br />
-            My journey into tech began with UI/UX basics and naturally grew into
-            Frontend Development. I’m currently expanding into Backend
-            Development as I work toward becoming a Full-Stack Developer. I
-            enjoy solving problems, learning continuously, and creating
+            My journey into tech began with UI/UX design and grew into frontend
+            development. I’m now exploring backend development and expanding my
+            skills as I work toward becoming a Full-Stack Developer. I enjoy
+            solving problems, learning new technologies, and turning ideas into
             solutions.
           </p>
         </div>

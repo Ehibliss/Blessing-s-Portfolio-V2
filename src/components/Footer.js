@@ -17,7 +17,7 @@ export default function Footer() {
               Blessing<span>.</span>
             </a>
 
-            <p>Frontend developer.</p>
+            <p>Software developer.</p>
           </div>
 
           <div className={styles.navigation}>
