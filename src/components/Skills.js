@@ -8,7 +8,7 @@ import {
   FaGithub,
   FaFigma,
 } from "react-icons/fa";
-
+import { SiPostgresql } from "react-icons/si";
 import {
   SiNextdotjs,
   SiExpress,
@@ -38,6 +38,7 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: FaNodeJs },
       { name: "Express.js", icon: SiExpress },
+      { name: "Postgres", icon: SiPostgresql },
       { name: "MongoDB", icon: SiMongodb },
       { name: "Mongoose", icon: SiMongoose },
       { name: "REST APIs", icon: null },

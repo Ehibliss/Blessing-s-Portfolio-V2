@@ -13,8 +13,8 @@ const Hero = () => {
           <h1 className={styles.heroTitle}>I'm Blessing</h1>
 
           <p className={styles.heroDescription}>
-            A Frontend Developer, I create digital solutions that are beautiful
-            & functional.
+            A Software Developer who builds digital solutions that are
+            beautiful, functional, and user-focused.
           </p>
 
           <div className={styles.heroButtons}>
@@ -35,7 +35,7 @@ const Hero = () => {
           </div>
 
           <div className={styles.heroRole}>
-            <span>Frontend Developer</span>
+            <span>Software Developer</span>
             <span className={styles.roleLine}> </span>
             <span>Full-Stack Developer</span>
           </div>
